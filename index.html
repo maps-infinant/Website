@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meal Plan Subscription</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="tabs">
+        <div id="homeTab" class="tab selected">Home</div>
+        <div id="ingredientsTab" class="tab">Ingredients</div>
+    </div>
+    <div id="home" class="content">
+        <h1>Example Meals</h1>
+        <div class="meal">
+            <h2>Grilled Chicken Salad</h2>
+            <p>Prep Time: 15 minutes</p>
+            <p>Price: $8.00</p>
+        </div>
+        <div class="meal">
+            <h2>Vegetarian Stir-Fry</h2>
+            <p>Prep Time: 20 minutes</p>
+            <p>Price: $6.50</p>
+        </div>
+        <div class="meal">
+            <h2>Spaghetti Bolognese</h2>
+            <p>Prep Time: 30 minutes</p>
+            <p>Price: $7.25</p>
+        </div>
+        <div class="meal">
+            <h2>Quinoa & Black Bean Tacos</h2>
+            <p>Prep Time: 25 minutes</p>
+            <p>Price: $5.75</p>
+        </div>
+        <div class="meal">
+            <h2>Teriyaki Salmon</h2>
+            <p>Prep Time: 30 minutes</p>
+            <p>Price: $9.50</p>
+        </div>
+        <button id="preferencesBtn">User's preferences</button>
+    </div>
+    <div id="ingredients" class="content hidden">
+        <h1>Sample Grocery List</h1>
+        <ul id="groceryList">
+            <!-- The sample grocery list will be populated here -->
+        </ul>
+    </div>
+	<div id="overlay">
+    <div id="preferences" class="hidden">
+    <h2>Preferences</h2>
+    <div>
+        <label for="numPeople">Number of people:</label>
+        <select id="numPeople"></select>
+    </div>
+    <div>
+        <label for="budget">Budget:</label>
+        <input id="budget" type="number" min="0" step="0.01" placeholder="$0.00">
+    </div>
+    <div>
+        <label for="maxPrepTime">Max Prep Time:</label>
+        <select id="maxPrepTime"></select>
+    </div>
+    <div>
+        <label>Meal Types:</label>
+        <button class="mealTypeBtn">Breakfast</button>
+        <button class="mealTypeBtn">Lunch</button>
+        <button class="mealTypeBtn">Dinner</button>
+        <button class="mealTypeBtn">Snacks</button>
+    </div>
+    <div>
+        <label for="diet">Diet:</label>
+        <select id="diet">
+            <option value="none">None</option>
+            <option value="vegan">Vegan</option>
+            <option value="vegetarian">Vegetarian</option>
+            <option value="paleo">Paleo</option>
+            <option value="keto">Keto</option>
+            <option value="glutenFree">Gluten Free</option>
+        </select>
+    </div>
+    <div>
+        <label for="allergies">Allergies:</label>
+        <select id="allergies">
+            <option value="none">None</option>
+            <option value="peanuts">Peanuts</option>
+            <option value="treeNuts">Tree Nuts</option>
+            <option value="milk">Milk</option>
+            <option value="eggs">Eggs</option>
+            <option value="wheat">Wheat</option>
+            <option value="soy">Soy</option>
+            <option value="fish">Fish</option>
+            <option value="shellfish">Shellfish</option>
+        </select>
+    </div>
+    <button id="preferencesSaveBtn">Save</button>
+</div>
+
+	</div>
+    <script src="script.js"></script>
+</body>
+</html>
